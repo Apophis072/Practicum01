@@ -40,15 +40,15 @@ public static void main(String[] args)
     File file = new File(fileName);
 
 
-    try (BufferedWriter br = new BufferedWriter(new FileWriter(file)))
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter(file)))
     {
 
         for (String recs : list)
         {
-            br.write(recs, 0, recs.length());
-            br.newLine();
+            bw.write(recs, 0, recs.length());
+            bw.newLine();
         }
-        br.close();
+        bw.close();
     }
     catch (IOException e)
     {
